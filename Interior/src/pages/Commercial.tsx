@@ -23,7 +23,7 @@ const projects = [
     description: "Co-Working Space.",
     media: ElectronicCity,
     isVideo: false,
-    slug: "Iconic Corenthum",
+    slug: "iconic-corenthum",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "The Sahed Realm",
+    title: "The Saheb Realm",
     category: "Cafes",
     location: "Agra",
     description: "RoofTop To Enhance the Experience.",
@@ -70,7 +70,7 @@ const projects = [
     title: "PNC Office",
     category: "Commercial",
     location: "Agra",
-    description: "Excelling the Briallance.",
+    description: "Excelling the Brilliance.",
     media: PNCOffice,
     isVideo: false,
     slug: "pnc-office",
@@ -194,7 +194,8 @@ const Commercial = () => {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   whileHover={{ y: -10 }}
                 >
-                  <div
+                  <Link
+                    to={`/commercial/${project.slug}`}
                     className="card-luxury group block"
                   >
                     <div className="aspect-[4/5] rounded-sm overflow-hidden mb-5">
@@ -230,7 +231,7 @@ const Commercial = () => {
                         {project.description}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>

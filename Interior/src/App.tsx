@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+import ProjectGallery from "./pages/ProjectGallery";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,10 @@ const App = () => (
             <Route path="/design-ideas" element={<DesignIdeas />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
+
+            {/* Project Gallery Routes */}
+            <Route path="/commercial/:slug" element={<ProjectGallery />} />
+            <Route path="/residences/:slug" element={<ProjectGallery />} />
 
             {/* Protected Admin Routes */}
             <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
